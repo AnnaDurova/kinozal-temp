@@ -76,7 +76,8 @@ async function sync() {
 function watchFiles() {
   syncInit();
   if (!option) watch(PATH.scssFiles, series(scss));
-  if (option === '--dev') watch(PATH.scssFiles, series(scssDev));
+  // if (option === '--dev') watch(PATH.scssFiles, series(scssDev));
+  watch(PATH.scssFiles, series(scssDev));
   if (option === '--css') watch(PATH.cssFiles, sync);
   watch(PATH.htmlFiles, sync);
   watch(PATH.jsFiles, sync);
