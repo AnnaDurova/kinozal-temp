@@ -10,7 +10,11 @@
   margin-bottom: 60px;
 }
 
-.new-films {
+.new-films,
+.top-week {
+    position: relative;
+    overflow: hidden;
+
   &-row {
     margin-right: -$gap / 2;
     margin-left: -$gap / 2;
@@ -22,12 +26,33 @@
     padding-left: $gap /2;
     margin-bottom: $gap;
 
-    &__thumbnail {
-      margin-bottom: 0;
-    }
-
     &__title {
       @include text-shortener;
+      margin: 0;
+      font-size: 1rem;
+      font-weight: bold;
+
+    }
+
+    &:hover {
+      h3 {
+        color: $color-white;
+      }
+    }
+
+    &__caption {
+      text-align: center;
+    }
+
+    &__thumbnail {
+      margin-bottom: 0;
+      transition: background-color 0.25s;
+
+      &:hover {
+        background-color: $color-accent;
+        border-color: $color-accent;
+
+      }
     }
   }
 }
