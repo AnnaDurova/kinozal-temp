@@ -4,11 +4,12 @@
   .site-search {
     margin-bottom: 45px;
   }
+
+  .user-login {
+    margin-bottom: 60px;
+  }
 }
 
-.user-login {
-  margin-bottom: 60px;
-}
 
 .new-films,
 .top-week {
@@ -56,3 +57,35 @@
     }
   }
 }
+ .film-news {
+     position: relative;
+     overflow: hidden;
+
+   &-item {
+
+     &__thumbnail {
+       margin-bottom: 0;
+       transition: background-color 0.25s;
+
+       &:hover {
+         border-color: $color-accent;
+         background-color: $color-accent;
+       }
+
+     }
+     &__image {
+       width: 100%;
+     }
+
+     &__text {
+       text-align: justify;
+       @include block-shortener(1rem, 1.5, 120px, 6);
+     }
+
+     &__button {
+       float: right;
+       margin-bottom: 30px;
+       transition: background-color 0.25s;
+     }
+   }
+ }

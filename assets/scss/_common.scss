@@ -61,6 +61,16 @@ h2 {
     }
 }
 
+h3 {
+    @include xs-min {
+        font-size: 1.5rem;
+    }
+
+    @include xs {
+        font-size: 1.25rem;
+    }
+}
+
 a {
     color: $color-primary;
 
